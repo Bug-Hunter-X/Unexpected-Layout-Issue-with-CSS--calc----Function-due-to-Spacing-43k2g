@@ -1,0 +1,9 @@
+The solution is to remove the extra space within the `calc()` function expression:
+
+```css
+.element {
+  width: calc(50% - 10px);
+}
+```
+
+By removing the space after the `-` operator, the correct calculation is performed, and the element's width will be 50% of its parent's width, minus 10px. This simple change ensures that the `calc()` function works as expected.
