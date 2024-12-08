@@ -1,0 +1,14 @@
+The following CSS code snippet demonstrates an uncommon error that can occur when using the `calc()` function with percentages and lengths.  The intended behavior is to calculate a width that is 50% of the parent container, minus 10px. However, in certain cases, this might not work correctly because there is a space between the percentage value and the minus sign.  The space prevents the correct calculation, resulting in unexpected layout.
+
+```css
+.element {
+  width: calc(50% - 10px);
+}
+```
+
+```css
+/*Incorrect, this will not subtract 10px*/
+.element {
+  width: calc(50% - 10px );
+}
+```
